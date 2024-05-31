@@ -1,62 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import commercial1 from '../assets/images/commercial1.jpg';
-import commercial2 from '../assets/images/commercial2.jpg';
-import commercial3 from '../assets/images/commercial3.webp'; // Add new images
-import commercial4 from '../assets/images/commercial4.webp';
-import commercial5 from '../assets/images/commercial5.webp';
-import commercial6 from '../assets/images/commercial6.webp';
-
-const commercialProjects = [
-  {
-    id: '1',
-    image: commercial1,
-    title: 'Modern Commercial Building',
-    description: 'A state-of-the-art commercial building with modern amenities and design.',
-    status: 'Pending',
-    likes: 3,
-  },
-  {
-    id: '2',
-    image: commercial2,
-    title: 'Spacious Retail Center',
-    description: 'A spacious retail center offering a premium shopping experience.',
-    status: 'Finished',
-    likes: 4,
-  },
-  {
-    id: '3',
-    image: commercial3,
-    title: 'Corporate Office Complex',
-    description: 'An innovative office complex designed to foster collaboration and productivity.',
-    status: 'Ongoing',
-    likes: 5,
-  },
-  {
-    id: '4',
-    image: commercial4,
-    title: 'Industrial Warehouse',
-    description: 'A large industrial warehouse equipped with modern storage solutions.',
-    status: 'Finished',
-    likes: 4,
-  },
-  {
-    id: '5',
-    image: commercial5,
-    title: 'Technology Park',
-    description: 'A technology park designed to host cutting-edge tech companies and startups.',
-    status: 'Pending',
-    likes: 3,
-  },
-  {
-    id: '6',
-    image: commercial6,
-    title: 'Retail and Entertainment Complex',
-    description: 'A retail and entertainment complex offering a mix of shopping, dining, and leisure activities.',
-    status: 'Finished',
-    likes: 5,
-  },
-];
+import commercialProjects from '../data/CommercialData'
 
 const CommercialGallery = () => {
   return (

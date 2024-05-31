@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import ResidentialGallery from './components/ResidentialGallery';
@@ -14,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />}>
+        <Route index element={<Navigate to="residential" />} />
           <Route path="residential" element={<ResidentialGallery />} />
           <Route path="commercial" element={<CommercialGallery />} />
           <Route path="architectural-design" element={<ArchitecturalDesignGallery />} />

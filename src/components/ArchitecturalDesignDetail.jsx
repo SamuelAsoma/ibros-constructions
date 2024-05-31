@@ -1,56 +1,89 @@
-
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { FaArrowLeft, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import Header from './Header';
 import Footer from './Footer';
-import design1 from '../assets/images/design1.jpg';
-import design2 from '../assets/images/design2.jpg';
-
-const architecturalDesigns = [
-  {
-    id: '1',
-    image: design1,
-    title: 'Modern Office Design',
-    description: 'A sleek and innovative office design that embraces open spaces and modern aesthetics.',
-    details: 'This office design project includes collaborative workspaces, private offices, and a rooftop garden. The design prioritizes employee well-being with natural light, ergonomic furniture, and green spaces.',
-  },
-  {
-    id: '2',
-    image: design2,
-    title: 'Luxury Residential Design',
-    description: 'An elegant residential design featuring top-notch amenities and luxurious living spaces.',
-    details: 'The residential design project features high-end finishes, spacious rooms, and a private garden. The design focuses on comfort and luxury, with smart home technology and sustainable materials.',
-  },
-];
+import architecturalDesigns from "../data/ArchitecturalDesignData";
 
 const ArchitecturalDesignDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const project = architecturalDesigns.find(project => project.id === id);
 
   if (!project) {
     return <div>Project not found</div>;
   }
 
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(`Hello, I am interested in the architectural design titled "${project.title}".`);
+    window.open(`https://wa.me/233547538851?text=${message}`, '_blank');
+  };
+
+  const handleEmailClick = () => {
+    const subject = encodeURIComponent(`Inquiry about "${project.title}"`);
+    const body = encodeURIComponent(`Hello,\n\nI am interested in the architectural design titled "${project.title}".\n\nPlease provide more details.\n\nThank you.`);
+    window.location.href = `mailto:info@yourcompany.com?subject=${subject}&body=${body}`;
+  };
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
-      <div className="container mx-auto p-4 pt-20">
-        <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-        <img src={project.image} alt={project.title} className="rounded-lg shadow-md mb-4" />
-        <p className="text-lg mb-2">{project.description}</p>
-        <p>{project.details}</p>
-        <div className="flex items-center mt-2">
-          <span className="mr-2">Status: {project.status}</span>
-          <span className="mr-2">{project.likes} likes</span>
-          {[...Array(5)].map((star, index) => (
-            <svg
-              key={index}
-              className={`w-4 h-4 ${index < project.likes ? 'text-yellow-400' : 'text-gray-300'}`}
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 .587l3.668 7.568L24 9.748l-6 5.878 1.423 8.689L12 18.896l-7.423 5.419L6 15.626 0 9.748l8.332-1.593z" />
-            </svg>
-          ))}
+      <div className="container mx-auto p-6 pt-24 flex-grow">
+        <button 
+          className="text-gray-600 hover:text-gray-900 flex items-center mb-6"
+          onClick={() => navigate(-1)}
+        >
+          <FaArrowLeft className="mr-2" /> Back
+        </button>
+        <h2 className="text-4xl font-extrabold mb-6 text-gray-800">{project.title}</h2>
+        <div className="flex flex-col md:flex-row md:space-x-6">
+          <div className="w-full md:w-1/2 lg:w-1/2 mb-6 md:mb-0">
+            <div className="aspect-w-4 aspect-h-3 rounded-lg shadow-lg overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md md:w-1/2 lg:w-1/2 flex flex-col justify-between">
+            <div>
+              <p className="text-xl mb-4 text-gray-700">{project.description}</p>
+              <p className="text-lg text-gray-600">{project.details}</p>
+              <p className="text-lg font-semibold text-gray-800 mt-6">Status: <span className="font-normal">{project.status}</span></p>
+              <div className="flex items-center mt-4">
+                <span className="text-lg font-semibold text-gray-800 mr-2">{project.likes} likes</span>
+                <div className="flex">
+                  {[...Array(5)].map((star, index) => (
+                    <svg
+                      key={index}
+                      className={`w-6 h-6 ${index < project.likes ? 'text-yellow-500' : 'text-gray-300'}`}
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 .587l3.668 7.568L24 9.748l-6 5.878 1.423 8.689L12 18.896l-7.423 5.419L6 15.626 0 9.748l8.332-1.593z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 bg-gray-100 p-6 rounded-lg shadow-md">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">Contact Us</h3>
+              <div className="flex flex-col sm:flex-row sm:space-x-4">
+                <button 
+                  className="mt-2 sm:mt-0 bg-green-500 text-white px-6 py-3 rounded-lg flex items-center shadow-lg hover:bg-green-700 transition duration-300"
+                  onClick={handleWhatsAppClick}
+                >
+                  <FaWhatsapp className="mr-2" /> WhatsApp
+                </button>
+                <button 
+                  className="mt-2 sm:mt-0 bg-blue-500 text-white px-6 py-3 rounded-lg flex items-center shadow-lg hover:bg-blue-700 transition duration-300"
+                  onClick={handleEmailClick}
+                >
+                  <FaEnvelope className="mr-2" /> Email
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
