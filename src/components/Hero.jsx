@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 md:px-8">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-4 leading-tight tracking-wider">
-                Ibro Construction and Architectural Design
+                Ibros Constructions and Architectural Designs
               </h1>
               <p className="text-sm md:text-lg lg:text-xl mb-4 md:mb-6 max-w-2xl font-light leading-relaxed tracking-wide">
                 Delivering excellence in architectural design and construction for commercial and residential buildings. Trust us to bring your vision to life with our expertise and commitment to quality.

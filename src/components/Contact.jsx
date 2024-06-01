@@ -20,7 +20,10 @@ const Contact = () => {
           <div className="mb-6 lg:mb-0 flex-1">
             <FaWhatsapp size={30} className="text-blue-500 inline-block mb-2" />
             <h3 className="text-xl font-bold">WhatsApp</h3>
-            <a href="https://wa.me/+233547538851" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">+233 54 753 8851</a>
+            <ul>
+              <li><a href="https://wa.me/+233547538851" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">+233 54 753 8851</a></li>
+              <li><a href="https://wa.me/+233543469526" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">+233 54 346 9526</a></li>
+            </ul>
           </div>
           <div className="flex-1">
             <FaPhone size={30} className="text-blue-500 inline-block mb-2" />

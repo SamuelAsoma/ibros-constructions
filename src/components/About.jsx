@@ -13,7 +13,7 @@ const About = () => {
         <div className="mb-12">
           <h3 className="text-3xl font-bold text-blue-800 mb-4">Introduction</h3>
           <p className="text-lg text-gray-800 leading-relaxed">
-            Ibro Construction and Architectural Design is a leading provider of architectural design services and construction for both commercial and residential buildings. With a commitment to excellence and a passion for innovation, we bring our clients visions to life.
+            Ibros Constructions and Architectural Designs is a leading provider of architectural design services and construction for both commercial and residential buildings. With a commitment to excellence and a passion for innovation, we bring our clients visions to life.
           </p>
         </div>
         <div className="mb-12">
@@ -63,7 +63,7 @@ const About = () => {
           <h3 className="text-3xl font-bold text-blue-800 mb-4">Company History</h3>
           <img src={officePhoto} alt="Our Office" className="w-full h-auto rounded-lg shadow-md" />
           <p className="text-lg text-gray-800 leading-relaxed mt-4">
-            Founded in [Year], Ibro Construction and Architectural Design has grown from a small firm into a leading player in the industry. Over the years, we have completed numerous projects, ranging from small residential buildings to large commercial complexes, always maintaining our commitment to quality and innovation.
+            Founded in 2014, Ibros Constructions and Architectural Designs has grown from a small firm into a leading player in the industry. Over the years, we have completed numerous projects, ranging from small residential buildings to large commercial complexes, always maintaining our commitment to quality and innovation.
           </p>
         </div>
       </div>

@@ -1,12 +1,10 @@
 import { Outlet, NavLink } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 import 'yet-another-react-lightbox/styles.css';
 
 const Gallery = () => {
   return (
     <div>
-      <Header />
       <section className="bg-gray-100 text-center">
         <nav className="fixed top-16 w-full bg-gray-100 shadow-md z-10">
           <ul className="flex justify-center space-x-4 p-4">
@@ -43,7 +41,6 @@ const Gallery = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

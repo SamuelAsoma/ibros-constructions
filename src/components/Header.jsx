@@ -29,6 +29,12 @@ const Header = () => {
           >
             Projects
           </NavLink>
+          <NavLink 
+            to="/for-sale" 
+            className={({ isActive }) => isActive ? 'text-blue-500 underline' : 'hover:underline text-white'}
+          >
+            For Sale
+          </NavLink>
         </nav>
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -40,19 +46,24 @@ const Header = () => {
         <nav className="md:hidden bg-gray-800 text-white p-4">
           <NavLink 
             to="/" 
-            className="block py-2" 
+            className={({ isActive }) => isActive ? 'block py-2 text-blue-500 underline' : 'block py-2 hover:underline text-white'}
             onClick={toggleMenu}
-            activeClassName="text-blue-500 underline"
           >
             Home
           </NavLink>
           <NavLink 
             to="/gallery/residential" 
-            className="block py-2" 
+            className={({ isActive }) => isActive ? 'block py-2 text-blue-500 underline' : 'block py-2 hover:underline text-white'}
             onClick={toggleMenu}
-            activeClassName="text-blue-500 underline"
           >
             Projects
+          </NavLink>
+          <NavLink 
+            to="/for-sale" 
+            className={({ isActive }) => isActive ? 'block py-2 text-blue-500 underline' : 'block py-2 hover:underline text-white'}
+            onClick={toggleMenu}
+          >
+            For Sale
           </NavLink>
         </nav>
       )}
