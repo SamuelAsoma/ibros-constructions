@@ -1,4 +1,7 @@
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS CSS
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import ForSale from './pages/ForSale';
@@ -12,6 +15,14 @@ import BuildingDetail from './pages/BuildingDetail';
 import Layout from './components/Layout';
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once - while scrolling down
+      offset: 200, // Offset (in px) from the original trigger point
+    });
+  }, []);
+
   return (
     <Router>
       <Routes>

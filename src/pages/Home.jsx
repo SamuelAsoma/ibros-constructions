@@ -4,20 +4,22 @@ import Services from '../components/Services';
 import Projects from '../components/Projects';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import BuildingsForSale from '../components/BuildingsForSale';
 
 
 const Home = () => {
   return (
     <div>
 
-      <div className="pt-24"> {/* Add padding to avoid overlap with fixed header */}
+      <div className="pt-24">
         <Hero />
         
         <main>
           <Services />
           <Projects />
-          <About />
+          <BuildingsForSale />
           <Contact />
+          <About />
         </main>
       </div>
     </div>

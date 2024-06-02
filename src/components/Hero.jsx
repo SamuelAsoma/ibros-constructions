@@ -1,4 +1,3 @@
-
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 import backgroundImage from '../assets/images/hero-bg.webp';
@@ -7,7 +6,7 @@ import slide3 from '../assets/images/slide2.webp';
 
 const Hero = () => {
   return (
-    <section className="relative py-8 bg-gray-100">
+    <section className="relative bg-gray-100">
       <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
         <Carousel
           autoPlay

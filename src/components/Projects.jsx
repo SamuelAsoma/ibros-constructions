@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 import archDesign1 from '../assets/images/arch-design1.jpg';
 import archDesign2 from '../assets/images/arch-design2.jpg';
@@ -57,36 +57,36 @@ const ongoingProjects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-12 bg-white text-center">
-      <h2 className="text-3xl font-bold mb-8">Our Projects</h2>
+    <section id="projects" className="py-8 bg-white text-center">
+      <h2 className="text-3xl font-bold mb-4 sm:mb-6 md:mb-8 animate-fadeIn border-b-2 border-orange-500 inline-block text-gray-800">Our Projects</h2>
       
       <div className="mb-12">
-        <h3 className="text-2xl font-bold mb-6">Architectural Designs</h3>
-        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <h3 className="text-2xl font-bold mb-6 text-orange-500">Architectural Designs</h3>
+        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8">
           {architecturalDesigns.map((project, index) => (
-            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105 animate-slideIn" style={{ animationDelay: `${index * 0.1}s` }}>
               <img src={project.image} alt={project.title} className="mb-4 w-full h-64 object-cover rounded-lg" />
-              <h4 className="text-2xl font-bold mb-2">{project.title}</h4>
-              <p>{project.description}</p>
+              <h4 className="text-lg font-bold mb-2 text-gray-800 border-t-2 border-b-2 border-gray-300 py-2">{project.title}</h4>
+              <p className="text-lg leading-relaxed text-gray-700" style={{ lineHeight: '1.5' }}>{project.description}</p>
             </div>
           ))}
         </div>
       </div>
       
       <div className="mb-12">
-        <h3 className="text-2xl font-bold mb-6">Ongoing Construction Projects</h3>
-        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <h3 className="text-2xl font-bold mb-6 text-orange-500">Ongoing Construction Projects</h3>
+        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8">
           {ongoingProjects.map((project, index) => (
-            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
+            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105 animate-slideIn" style={{ animationDelay: `${index * 0.1}s` }}>
               <img src={project.image} alt={project.title} className="mb-4 w-full h-64 object-cover rounded-lg" />
-              <h4 className="text-2xl font-bold mb-2">{project.title}</h4>
-              <p>{project.description}</p>
+              <h4 className="text-lg font-bold mb-2 text-gray-800 border-t-2 border-b-2 border-gray-300 py-2">{project.title}</h4>
+              <p className="text-lg leading-relaxed text-gray-700" style={{ lineHeight: '1.5' }}>{project.description}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <Link to="/gallery/residential" className="inline-block bg-blue-600 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+      <Link to="/gallery/residential" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
         Explore Our Gallery
       </Link>
     </section>

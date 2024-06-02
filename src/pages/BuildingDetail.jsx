@@ -41,7 +41,7 @@ const BuildingDetail = () => {
               <p className="text-lg font-semibold mb-4">Status: {building.status}</p>
               <div className="flex justify-center space-x-4">
                 <a
-                  href={`mailto:info@yourcompany.com?subject=Inquiry about ${building.title}`}
+                  href={`mailto:ibroone3030@gmail.com?subject=Inquiry about ${building.title}`}
                   className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition"
                 >
                   Contact via Email
