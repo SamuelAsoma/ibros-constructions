@@ -51,7 +51,6 @@ const ProjectDetail = ({ projects }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

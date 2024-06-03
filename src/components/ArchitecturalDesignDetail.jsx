@@ -86,7 +86,6 @@ const ArchitecturalDesignDetail = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

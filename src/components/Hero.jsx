@@ -6,15 +6,15 @@ import slide3 from '../assets/images/slide2.webp';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gray-100">
+    <section className="relative pt-8 bg-gray-100">
       <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
         <Carousel
           autoPlay
           infiniteLoop
           showThumbs={false}
           showStatus={false}
-          showArrows={false}
-          interval={5000}
+          showArrows={true}
+          interval={3000}
           className="rounded-lg overflow-hidden"
         >
           <div className="relative h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-lg" style={{ backgroundImage: `url(${backgroundImage})` }}>

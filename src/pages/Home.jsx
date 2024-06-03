@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
 
-      <div className="pt-24">
+      <div className="pt-1">
         <Hero />
         
         <main>
