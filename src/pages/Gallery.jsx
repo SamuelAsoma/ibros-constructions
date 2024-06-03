@@ -34,8 +34,8 @@ const Gallery = () => {
             </li>
           </ul>
         </nav>
-        <div className="pt-32 md:pt-40">
-          <h2 className="text-3xl font-bold mb-8 pt-8 md:pt-0">Gallery</h2>
+        <div className="pt-20 md:pt-40">
+          <h2 className="text-3xl font-bold mb-8 pt-4 md:pt-0">Gallery</h2>
           <div className="max-w-6xl mx-auto">
             <Outlet />
           </div>

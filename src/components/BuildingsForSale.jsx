@@ -8,7 +8,7 @@ const BuildingsForSale = () => {
 
   return (
     <section id="for-sale" className="py-12 bg-gray-100 text-center">
-      <h2 className="text-3xl font-bold mb-8 animate-fadeIn border-b-2 border-orange-500 inline-block text-gray-800">Buildings for Sale</h2>
+      <h2 className="text-xl font-bold mb-8 animate-fadeIn border-b-2 border-orange-500 inline-block text-gray-800">Buildings for Sale</h2>
       <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-2 px-4 sm:px-6 lg:px-8">
         {buildingsForSale.map((building) => (
           <div key={building.id} className="bg-white p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105">

@@ -14,7 +14,7 @@ const ForSale = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="flex-grow container mx-auto py-8">
-        <h2 className="text-3xl font-bold mb-4">Buildings for Sale</h2>
+        <h2 className="text-2xl ml-4 font-bold mb-4">Buildings for Sale</h2>
         <div className="tabs flex justify-center space-x-4 mb-8">
           <button
             onClick={() => setActiveTab('completed')}

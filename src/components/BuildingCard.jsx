@@ -7,7 +7,7 @@ const BuildingCard = ({ building }) => (
       <h3 className="font-bold text-xl mb-2">{building.title}</h3>
       <p className="text-gray-700 text-base mb-4">{building.description}</p>
       <p className="text-green-500 font-semibold">Status: {building.status}</p>
-      <Link to={`/building/${building.id}`} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded inline-block">View Details</Link>
+      <Link to={`/building/${building.id}`} className="mt-4 bg-blue-500 text-white font-semibold px-4 py-2 rounded inline-block">View Details</Link>
     </div>
   </div>
 );

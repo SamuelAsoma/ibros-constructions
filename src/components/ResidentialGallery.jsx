@@ -41,4 +41,7 @@ const ResidentialGallery = React.memo(() => {
   );
 });
 
+// Setting a display name for the memoized component
+ResidentialGallery.displayName = 'ResidentialGallery';
+
 export default ResidentialGallery;

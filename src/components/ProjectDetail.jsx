@@ -15,14 +15,14 @@ const ProjectDetail = ({ projects }) => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
-      <div className="container mx-auto p-6 pt-24 flex-grow">
+      <div className="container mx-auto p-6 pt-8 flex-grow">
         <button 
-          className="text-gray-600 hover:text-gray-900 flex items-center mb-6"
+          className="text-orange-600 hover:text-orange-900 flex items-center mb-6"
           onClick={() => navigate(-1)}
         >
           <FaArrowLeft className="mr-2" /> Back
         </button>
-        <h2 className="text-4xl font-extrabold mb-6 text-gray-800">{project.title}</h2>
+        <h2 className="text-2xl font-bold mb-6 text-gray-800">{project.title}</h2>
         <div className="flex flex-col md:flex-row md:space-x-6">
           <img 
             src={project.image} 
@@ -31,8 +31,8 @@ const ProjectDetail = ({ projects }) => {
           />
           <div className="bg-white p-6 rounded-lg shadow-md md:w-1/2 lg:w-auto">
             <p className="text-xl mb-4 text-gray-700">{project.description}</p>
-            <p className="text-lg text-gray-600">{project.details}</p>
-            <p className="text-lg font-semibold text-gray-800 mt-6">Status: <span className="font-normal">{project.status}</span></p>
+            <p className="text-md text-gray-600">{project.details}</p>
+            <p className="text-lg font-semibold text-gray-800 mt-3">Status: <span className="font-normal">{project.status}</span></p>
             <div className="flex items-center mt-4">
               <span className="text-lg font-semibold text-gray-800 mr-2">{project.likes} likes</span>
               <div className="flex">
