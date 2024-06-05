@@ -15,21 +15,21 @@ import flatB7 from '../assets/images/forsale-images/flatB-7.jpg';
 import flatB8 from '../assets/images/forsale-images/flatB-8.jpg';
 
 const buildingsData = [
-  {
-    id: 1,
-    title: 'Luxury Villa',
-    description: 'A beautiful luxury villa located in the heart of the city.',
-    status: 'Completed',
-    images: [
-      flatA1,
-      flatA2,
-      flatA3,
-      flatA4,
-      flatA5,
-      flatA6,
-    ],
-    image: flatA1, // Thumbnail image
-  },
+  // {
+  //   id: 1,
+  //   title: 'Luxury Villa',
+  //   description: 'A beautiful luxury villa located in the heart of the city.',
+  //   status: 'Completed',
+  //   images: [
+  //     flatA1,
+  //     flatA2,
+  //     flatA3,
+  //     flatA4,
+  //     flatA5,
+  //     flatA6,
+  //   ],
+  //   image: flatA1,
+  // },
   {
     id: 2,
     title: 'Modern Apartment',
